@@ -1,5 +1,6 @@
 * {
     text-decoration: none !important;
+    /* border: blue 1px solid; */
 }
 
 :root {
@@ -19,23 +20,33 @@ a:hover {
     color: var(--primary-color);
 }
 
+.navbar {
+    padding: 0;
+}
+
 .logo {
     width: 50px;
 }
 
 #home {
-    height: 100vh;
     justify-content: center;
+    height: 92vh;
+    position: relative;
+}
+
+.avatarLocation {
+    min-height: 150px;
 }
 
 .avatar {
-    margin-top: 50px;
-    width: 400px;
-    max-width: 90vw;
+    width: 250px;
+    max-width: 50vw;
+    position: absolute;
+    bottom: -25px;
 }
 
 #sobre {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,20 +54,18 @@ a:hover {
 
 
 #sobre .card {
-    min-width: 30%;
     background-color: var(--light-color) !important;
-    color: var(--terciary-color);
 }
 
 .card-group {
-    width: 1200px;
-    max-width: 95vw;
+    max-width: 90vw;
     margin-bottom: 20px;
 }
 
 .card {
     background-color: var(--secondary-color) !important;
     color: var(--terciary-color);
+    max-height: 100%;
 
 }
 
@@ -101,10 +110,11 @@ a:hover {
     text-align: center;
 }
 
+#home,
 #sobre,
 #projects,
 #contact {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 
@@ -115,16 +125,18 @@ a:hover {
     #sobre,
     #projects,
     #contact {
-        padding-top: 165px;
+        padding-top: 100px;
     }
 
     #sobre {
+        min-height: 100vh;
         height: auto;
     }
 
 }
 
 @media (max-width:800px) {
+
     .card-group {
         flex-direction: column;
         max-width: 85vw;
@@ -137,5 +149,19 @@ a:hover {
 
     .card-img-top {
         border-radius: 5px 5px 0px 0px !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .navbar {
+        font-size: 0.8rem;
+
+    }
+
+    #home,
+    #sobre,
+    #projects,
+    #contact {
+        padding-top: 100px;
     }
 }
